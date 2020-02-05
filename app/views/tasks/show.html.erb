@@ -1,0 +1,35 @@
+
+<h1>タスク詳細</h1>
+
+<div class="col-md-offset-3 col-md-6">
+  <div class="row">
+    <table class="table table-bordered">
+      <thead class="table-primary">
+        <tr>
+          <th>ID</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><%= Task.human_attribute_name :task_name %></th>
+          <td><%= @task.task_name %></td>
+        </tr>
+        <tr>
+          <th><%= Task.human_attribute_name :note %></th>
+          <td><%= @task.note %></td>
+        </tr>
+        <tr>
+          <th><%= Task.human_attribute_name :created_at %></th>
+          <td><%= @task.created_at %></td>
+        </tr>
+        <tr>
+          <th><%= Task.human_attribute_name :update_at %></th>
+          <td><%= @task.updated_at %></td>
+        </tr>
+      </tbody>
+    </table>
+       <%= link_to "編集", edit_user_task_path, class: "btn btn-success btn-signup" %>
+       <%= link_to "削除", user_task_path(@task.id), method: :destroy, class: "btn btn-danger btn-signup" %>
+  </div>
+ </div>
