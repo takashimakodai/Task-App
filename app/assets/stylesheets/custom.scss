@@ -92,6 +92,17 @@ th {
   text-decoration: none;
 }
 
+.dropdown-toggle {
+  font-size: 1.2em;
+  color: #fff!important;
+  background-color: teal!important;
+  font-weight: bold;
+}
+
+.dropdown-toggle:hover {
+  color: #ccc!important;
+  text-decoration: none;
+}
 
 
 /* デバッグウインドウ */
@@ -127,13 +138,3 @@ th {
   }
 }
 
-.dropdown-toggle {
-  font-size: 1.2em;
-  color: #fff;
-  font-weight: bold;
-}
-
-.dropdown-toggle:hover {
-  color: #ccc;
-  text-decoration: none;
-}
