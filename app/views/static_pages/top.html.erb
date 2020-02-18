@@ -13,6 +13,8 @@
     <h2>ログイン</h2>
         <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
         
+          <%= if current_user && logged_in? %>
+    
           <%= f.label :email, "メールアドレス", class: "label-signup" %>
           <%= f.email_field :email, class: "form-control" %>
       
@@ -25,6 +27,8 @@
           <% end %>
   
           <%= f.submit "ログイン", class: "btn btn-block btn-primary btn-signup" %>
+          
+          <% else %>
         <% end %>
     </div>
 </class>
