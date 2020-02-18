@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_user_id, only: [:show, :new, :create, :edit, :update, :destroy]
+  before_action :set_user_id, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   
   def index
     @tasks = Task.all

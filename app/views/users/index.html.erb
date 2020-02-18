@@ -8,17 +8,23 @@
       <tr>
         <th><%= User.human_attribute_name :name %></th>
       </tr>
+      <tr>
+        <th>
+          <%= User.first.name %>
+          <%= link_to "管理者", "#", class: "btn btn-sm btn-primary" %>
+        </th>
+      </tr>
     </thead>
     
     <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to user.name, user %></td>
-        <td><%= link_to "編集", edit_user_path(user), class: "btn pull-right btn-success" %></td>
+      <tr><% if current_user.admin? && !current_user?(user) %>
+        <td><%= link_to user.name, user %>
+          <%= link_to "一般", "#", class: "btn btn-sm btn-success" %>
+        </td>
         <td>
-          <% if current_user.admin? && !current_user?(user) %>
-            <%= link_to "削除", user, method: :delete,
-                data: { confirm: "削除してよろしいですか？" },
-                class: "btn btn-danger" %>
+          <%= link_to "削除", user, method: :delete,
+              data: { confirm: "削除してよろしいですか？" },
+              class: "btn btn-danger" %>
           <% end %>
         </td>
       </tr>
