@@ -46,7 +46,7 @@ class TasksController < ApplicationController
   private
   
     def set_user_id
-    @user = User.find(params[:user_id])
+      @user = User.find(params[:user_id])
     end
 
     def task_params
