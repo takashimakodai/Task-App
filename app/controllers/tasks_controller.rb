@@ -28,17 +28,17 @@ class TasksController < ApplicationController
   end
 
   def update
-    if @task.save
-      flash[:success] = '更新しました'
-      redirect_to user_tasks_path #indexページへ遷移
+    if @task.update_attributes(task_params)
+       flash[:success] = '更新しました'
+       redirect_to user_task_path 
     else
-      render :show
+       render :show
     end
   end
   
   def destroy
     @task.destroy
-    flash[:success] = '削除しました'
+    flash[:danger] = '削除しました'
     redirect_to user_tasks_path
   end
 
