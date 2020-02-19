@@ -21,7 +21,7 @@
         </tr>
         <tr>
           <th><%= User.human_attribute_name :created_at %></th>
-          <td><%= @user.created_at %></td>
+          <td><%= @user.created_at.to_s(:datetime_jp) %></td>
         </tr>
       </tbody>
     </table>

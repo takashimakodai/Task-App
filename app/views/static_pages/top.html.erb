@@ -15,7 +15,6 @@
     
           <%= f.label :email, "メールアドレス", class: "label-signup" %>
           <%= f.email_field :email, class: "form-control" %>
-      
           <%= f.label :password, "パスワード", class: "label-signup" %>
           <%= f.password_field :password, class: "form-control" %>
           
@@ -23,8 +22,7 @@
             <%= f.check_box :remember_me, id: "remember-me" %>
           <span>ログイン情報を記憶する</span>
           <% end %>
-          <%= f.submit "ログイン", class: "btn btn-block btn-primary btn-signup",
-              data: {disable_with: 'ログイン状態です'} %>
+          <%= f.submit "ログイン", class: "btn btn-block btn-primary btn-signup",data: {disable_with: 'ログイン状態です'} %>
         <% end %>
     </div>
 </class>
