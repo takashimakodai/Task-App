@@ -59,9 +59,7 @@ p {
   line-height: 1.7em;
 }
 
-th {
-  background-color: #cccccc;
-}
+
 
 /* ヘッダー */
 
@@ -136,5 +134,10 @@ th {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* 追加分 */
+.dropdown {
+  background-color: #cccccc;
 }
 

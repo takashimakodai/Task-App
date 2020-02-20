@@ -15,10 +15,10 @@
             <%= current_user.name %> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li>ユーザー</li>
+              <li class="dropdown">ユーザー</li>
               <li><%= link_to "プロフィール", current_user %></li>
               <li><%= link_to "ユーザー設定", edit_user_path(current_user) %></li>
-              <li>タスク</li>
+              <li class="dropdown">タスク</li>
               <li><%= link_to "タスク一覧", user_tasks_path(current_user) %></li>
               <li class="divider"></li>
               <li><%= link_to "ログアウト", logout_path, method: :delete %></li>

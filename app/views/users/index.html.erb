@@ -6,13 +6,13 @@
   <table class="table table-condensed table-hover" id="table-users">
     <thead>
       <tr>
-        <th><%= User.human_attribute_name :name %></th>
+        <td><%= User.human_attribute_name :name %></td>
       </tr>
       <tr>
-        <th>
+        <td>
           <%= User.first.name %>
           <%= link_to "管理者", "#", class: "btn btn-sm btn-primary" %>
-        </th>
+        </td>
       </tr>
     </thead>
     

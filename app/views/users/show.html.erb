@@ -6,21 +6,21 @@
     <table class="table table-bordered">
       <thead class="table-primary">
         <tr>
-          <th><%= User.human_attribute_name :id %></th>
+          <th class="dropdown"><%= User.human_attribute_name :id %></th>
           <td><%= @user.id %></td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th><%= User.human_attribute_name :name %></th>
+          <th class="dropdown"><%= User.human_attribute_name :name %></th>
           <td><%= @user.name %></td>
         </tr>
         <tr>
-          <th><%= User.human_attribute_name :email %></th>
+          <th class="dropdown"><%= User.human_attribute_name :email %></th>
           <td><%= @user.email %></td>
         </tr>
         <tr>
-          <th><%= User.human_attribute_name :created_at %></th>
+          <th class="dropdown"><%= User.human_attribute_name :created_at %></th>
           <td><%= @user.created_at.to_s(:datetime_jp) %></td>
         </tr>
       </tbody>
